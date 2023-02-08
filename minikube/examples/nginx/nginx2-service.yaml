@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-hello
+  name: nginx2-service
 spec:
   selector:
-    app: nginxhello
+    app: nginx2
   ports:
     - protocol: TCP
       port: 8080 # Port which this service will be listing to

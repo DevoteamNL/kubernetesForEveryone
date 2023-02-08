@@ -76,7 +76,7 @@ kubectl apply -f nginx/nginx1-service.yaml -n random-namespace
 ```
 
 ```
-kubectl port-forward service/nginx1-service 8080:8080 -n random-namespace
+kubectl describe deployment/nginx1-deployment -n random-namespace
 ```
 
 ```
@@ -85,6 +85,14 @@ kubectl apply -f nginx/nginx2-deployment.yaml -n random-namespace
 
 ```
 kubectl apply -f nginx/nginx2-service.yaml -n random-namespace
+```
+
+```
+kubectl describe deployment/nginx2-deployment -n random-namespace
+```
+
+```
+kubectl port-forward service/nginx1-service 8080:8080 -n random-namespace
 ```
 
 ```
