@@ -11,14 +11,11 @@ The purporse here is to guide you through the installation steps for minikube, d
 
 ## Getting Started
 
-### All you need
-
-- Docker installed
-
 ### Installing
 
-This installation is using the package manager for windows Chocolatey. <br>
-In case you don't have it installed visit: https://docs.chocolatey.org/en-us/choco/setup
+This installation is using the package manager for windows called **Chocolatey**. <br>
+For any other distributions you can follow here: https://minikube.sigs.k8s.io/docs/start/ <p>
+In case you don't have **Chocolatey** installed visit: https://docs.chocolatey.org/en-us/choco/setup and install before to continue as below.
 
 ```bash
 choco install minikube
@@ -34,7 +31,7 @@ choco install kubernetes-cli
 minikube start
 ```
 
-## For Windows users, in case you got the following error:
+## For Windows users, in case you get the following error:
 
 ```
 Exiting due to PR_HYPERV_MODULE_NOT_INSTALLED: Failed to start host: creating host: create: precreate: Hyper-V PowerShell Module is not available
