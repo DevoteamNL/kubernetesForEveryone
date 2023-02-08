@@ -1,6 +1,6 @@
 # Minikube hands-on
 
-The purporse here is to guide you through the installation steps for minikube and deploy a simple nginx page as result.
+The purporse here is to guide you through the installation steps for minikube, deploy nginx, nginx service and visualize.
 
 ## Minimum requirements
 
@@ -28,21 +28,50 @@ choco install minikube
 choco install kubernetes-cli
 ```
 
-### Executing program
+### Initializing
 
-- How to run the program
-- Step-by-step bullets
+```bash
+minikube start
+```
 
-```
-code blocks for commands
-```
+## For Windows users, in case you got the following error:
 
 ```
 Exiting due to PR_HYPERV_MODULE_NOT_INSTALLED: Failed to start host: creating host: create: precreate: Hyper-V PowerShell Module is not available
 ```
 
+Run the command below to enable HYPERV MODULE.
+
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Tools-All -All
+```
+
+### Feeling at home
+
+```bash
+kubectl help
+```
+
+```bash
+kubectl get nodes
+```
+
+```bash
+kubectl get ns
+```
+
+```bash
+kubectl config current-context
+```
+
+### Deploying nginx
+
+```bash
+kubectl apply -f <something-here>
+```
+
+```
+code blocks for commands
 ```
 
 ## Find more here
