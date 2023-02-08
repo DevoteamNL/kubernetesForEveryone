@@ -64,7 +64,7 @@ kubectl config current-context
 ### Deploying nginx deployment component
 
 ```
-kubectl apply -f nginx-deployment.yaml
+kubectl apply -f nginx-deployment.yaml -m nginx
 ```
 
 #### Let's be curious
@@ -84,7 +84,16 @@ kubectl describe deployment/nginx-deployment -n nginx
 ### Deploying nginx service component
 
 ```
-kubectl apply -f nginx-service.yaml
+kubectl apply -f nginx-service.yaml -n nginx
+
+```
+
+```
+kubectl port-forward service/nginx-service 8080:8080 -n nginx
+```
+
+```
+kubectl describe service nginx-service -n nginx
 ```
 
 ## Find more here
