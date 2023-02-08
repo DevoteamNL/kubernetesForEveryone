@@ -47,7 +47,7 @@ https://minikube.sigs.k8s.io/docs/faq/
 
 Anderson Soares Lopes
 
-[@Email](anderson.lopes@devoteam.com) <br>
+:email: anderson.lopes@devoteam.com <br>
 [@GitHub](https://www.linkedin.com/in/andersonsoaresl/) <br>
 [@Linkedin](https://www.linkedin.com/in/andersonsoaresl/)
 
