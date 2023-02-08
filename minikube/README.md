@@ -135,7 +135,7 @@ minikube addons enable ingress
 ```
 
 ```
-kubectl apply -f nginx-service.yaml -n nginx
+kubectl apply -f ingress.yaml -n nginx
 ```
 
 ## Find more here
