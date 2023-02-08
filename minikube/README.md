@@ -1,6 +1,6 @@
 # Minikube hands-on
 
-The purporse here is to guide you through the installation steps for minikube, deploy nginx, nginx service and visualize.
+The purporse here is to guide you through the installation steps for minikube, deploy nginx, nginx service and visualize it.
 
 ## Minimum requirements
 
@@ -15,7 +15,7 @@ The purporse here is to guide you through the installation steps for minikube, d
 
 This installation is using the package manager for windows called **Chocolatey**. <br>
 For any other distributions you can follow here: https://minikube.sigs.k8s.io/docs/start/ <p>
-In case you don't have **Chocolatey** installed visit: https://docs.chocolatey.org/en-us/choco/setup and install before to continue as below.
+In case you don't have **Chocolatey** installed visit: https://docs.chocolatey.org/en-us/choco/setup and install before to continue with the below steps.
 
 ```
 choco install minikube
@@ -37,7 +37,7 @@ minikube start
 Exiting due to PR_HYPERV_MODULE_NOT_INSTALLED: Failed to start host: creating host: create: precreate: Hyper-V PowerShell Module is not available
 ```
 
-Run the command below to enable HYPERV MODULE.
+Open a PowerShell with Admin privileges and run the command below to enable HYPERV MODULE.
 
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Tools-All -All
@@ -96,6 +96,48 @@ kubectl port-forward service/nginx-service 8080:8080 -n nginx
 kubectl describe service nginx-service -n nginx
 ```
 
+### Minikube dashboards
+
+```
+minikube dashboard
+```
+
+### Happy Helm Charts
+
+```
+choco install kubernetes-helm
+```
+
+```
+helm repo add grafana https://grafana.github.io/helm-charts
+```
+
+```
+helm install grafana grafana/grafana -n nginx
+```
+
+```
+kubectl get pods -n nginx
+```
+
+```
+kubectl get services -n nginx
+```
+
+```
+kubectl port-forward service/grafana 9090:80 -n nginx
+```
+
+### Ingress
+
+```
+minikube addons enable ingress
+```
+
+```
+kubectl apply -f nginx-service.yaml -n nginx
+```
+
 ## Find more here
 
 Minikube project documentation page
@@ -127,3 +169,4 @@ Anderson Soares Lopes
 - https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/#install-nonstandard-package-tools
 - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 - https://kubernetes.io/docs/concepts/services-networking/service/
+- https://helm.sh/
