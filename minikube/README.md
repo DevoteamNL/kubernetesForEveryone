@@ -17,17 +17,17 @@ This installation is using the package manager for windows called **Chocolatey**
 For any other distributions you can follow here: https://minikube.sigs.k8s.io/docs/start/ <p>
 In case you don't have **Chocolatey** installed visit: https://docs.chocolatey.org/en-us/choco/setup and install before to continue as below.
 
-```bash
+```
 choco install minikube
 ```
 
-```bash
+```
 choco install kubernetes-cli
 ```
 
 ### Initializing
 
-```bash
+```
 minikube start
 ```
 
@@ -45,30 +45,46 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Tools-All -
 
 ### Feeling at home
 
-```bash
+```
 kubectl help
 ```
 
-```bash
+```
 kubectl get nodes
 ```
 
-```bash
+```
 kubectl get ns
 ```
 
-```bash
+```
 kubectl config current-context
 ```
 
-### Deploying nginx
+### Deploying nginx deployment component
 
-```bash
-kubectl apply -f <something-here>
+```
+kubectl apply -f nginx-deployment.yaml
+```
+
+#### Let's be curious
+
+```
+kubectl get pods -w -n nginx
 ```
 
 ```
-code blocks for commands
+kubectl get pods -n nginx
+```
+
+```
+kubectl describe deployment/nginx-deployment -n nginx
+```
+
+### Deploying nginx service component
+
+```
+kubectl apply -f nginx-service.yaml
 ```
 
 ## Find more here
@@ -101,3 +117,4 @@ Anderson Soares Lopes
 - https://docs.chocolatey.org/en-us/choco/setup
 - https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/#install-nonstandard-package-tools
 - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+- https://kubernetes.io/docs/concepts/services-networking/service/
