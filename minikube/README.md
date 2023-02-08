@@ -102,10 +102,32 @@ kubectl describe service nginx-service -n nginx
 minikube dashboard
 ```
 
+### Ingress is your friend
+
+```
+minikube addons enable ingress
+```
+
+```
+kubectl apply -f ingress.yaml -n nginx
+```
+
+```
+kubectl apply -f deployment.yaml -n nginx
+```
+
+```
+kubectl apply -f service.yaml -n nginx
+```
+
 ### Happy Helm Charts
 
 ```
 choco install kubernetes-helm
+```
+
+```
+kubectl create namespace grafana
 ```
 
 ```
@@ -117,36 +139,8 @@ helm install grafana grafana/grafana -n nginx
 ```
 
 ```
-kubectl get pods -n nginx
+kubectl port-forward service/grafana 9090:80 -n grafana
 ```
-
-```
-kubectl get services -n nginx
-```
-
-```
-kubectl port-forward service/grafana 9090:80 -n nginx
-```
-
-### Ingress
-
-```
-minikube addons enable ingress
-```
-
-```
-kubectl apply -f ingress.yaml -n nginx
-```
-
-## Find more here
-
-Minikube project documentation page
-
-https://minikube.sigs.k8s.io/docs/
-
-Minikube FAQ
-
-https://minikube.sigs.k8s.io/docs/faq/
 
 <p>
 
@@ -170,3 +164,5 @@ Anderson Soares Lopes
 - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 - https://kubernetes.io/docs/concepts/services-networking/service/
 - https://helm.sh/
+- https://minikube.sigs.k8s.io/docs/
+- https://minikube.sigs.k8s.io/docs/faq/
