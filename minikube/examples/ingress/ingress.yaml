@@ -8,14 +8,14 @@ spec:
     - http:
         paths:
           - pathType: Prefix
-            path: /login
+            path: /nginx1
             backend:
               service:
-                name: grafana
+                name: nginx-hello
                 port:
-                  number: 80
+                  number: 8080
           - pathType: Prefix
-            path: /
+            path: /nginx2
             backend:
               service:
                 name: nginx-service
