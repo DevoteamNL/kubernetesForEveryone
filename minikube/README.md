@@ -130,15 +130,11 @@ minikube addons enable ingress
 ```
 
 ```
-kubectl apply -f ingress.yaml -n nginx
+kubectl apply -f ingress/ingress.yaml -n random-namespace
 ```
 
 ```
-kubectl apply -f deployment.yaml -n nginx
-```
-
-```
-kubectl apply -f service.yaml -n nginx
+kubectl describe ingress my-ingress -n random-namespace
 ```
 
 ### Happy Helm Charts
