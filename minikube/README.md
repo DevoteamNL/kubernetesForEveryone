@@ -1,6 +1,6 @@
 # Minikube hands-on
 
-The purporse here is to guide you through the installation steps for minikube, deploy nginx, nginx service and visualize it.
+The purporse here is to guide you through the installation steps for minikube, deploy nginx, nginx service, ingress and visualize it.
 
 ## Minimum requirements
 
@@ -64,36 +64,49 @@ kubectl config current-context
 ### Deploying nginx deployment component
 
 ```
-kubectl apply -f nginx-deployment.yaml -m nginx
+kubectl create namespace random-namespace
+```
+
+```
+kubectl apply -f nginx/nginx1-deployment.yaml -n random-namespace
+```
+
+```
+kubectl apply -f nginx/nginx1-service.yaml -n random-namespace
+```
+
+```
+kubectl port-forward service/nginx1-service 8080:8080 -n random-namespace
+```
+
+```
+kubectl apply -f nginx/nginx2-deployment.yaml -n random-namespace
+```
+
+```
+kubectl apply -f nginx/nginx2-service.yaml -n random-namespace
+```
+
+```
+kubectl port-forward service/nginx2-service 8080:8080 -n random-namespace
 ```
 
 #### Let's be curious
 
 ```
-kubectl get pods -w -n nginx
+kubectl get pods -n random-namespace
 ```
 
 ```
-kubectl get pods -n nginx
+kubectl get deployment -n random-namespace
 ```
 
 ```
-kubectl describe deployment/nginx-deployment -n nginx
-```
-
-### Deploying nginx service component
-
-```
-kubectl apply -f nginx-service.yaml -n nginx
-
+kubectl describe deployment/nginx1-deployment -n random-namespace
 ```
 
 ```
-kubectl port-forward service/nginx-service 8080:8080 -n nginx
-```
-
-```
-kubectl describe service nginx-service -n nginx
+kubectl describe service nginx1-service -n random-namespace
 ```
 
 ### Minikube dashboards

@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-hello-demo
+  name: nginx2-deployment
   labels:
-    app: nginxhello
+    app: nginx2
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: nginxhello
+      app: nginx2
   template:
     metadata:
       labels:
-        app: nginxhello
+        app: nginx2
     spec:
       containers:
-      - name: nginx-hello-demo
+      - name: nginx2
         image: nginxdemos/hello:latest
         ports:
         - containerPort: 80

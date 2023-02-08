@@ -11,13 +11,13 @@ spec:
             path: /nginx1
             backend:
               service:
-                name: nginx-hello
+                name: nginx1-service
                 port:
                   number: 8080
           - pathType: Prefix
             path: /nginx2
             backend:
               service:
-                name: nginx-service
+                name: nginx2-service
                 port:
                   number: 8080
