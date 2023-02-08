@@ -100,3 +100,4 @@ Anderson Soares Lopes
 - https://minikube.sigs.k8s.io/docs/start/
 - https://docs.chocolatey.org/en-us/choco/setup
 - https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/#install-nonstandard-package-tools
+- https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
