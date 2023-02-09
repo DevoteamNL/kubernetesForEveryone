@@ -167,6 +167,12 @@ helm repo add grafana https://grafana.github.io/helm-charts
 helm install grafana grafana/grafana -n random-namespace --version 6.50.7 -f .\grafana\values.yaml
 ```
 
+### Bye minikube
+
+```
+minikube delete
+```
+
 <p>
 
 ## Author
