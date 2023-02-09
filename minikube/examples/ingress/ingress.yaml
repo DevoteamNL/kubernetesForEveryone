@@ -4,19 +4,20 @@ metadata:
   name: my-ingress
 spec:
   rules:
-    - http:
-        paths:
-          - pathType: Prefix
-            path: /nginx1
-            backend:
-              service:
-                name: nginx1-service
-                port:
-                  number: 8080
-          - pathType: Prefix
-            path: /nginx2
-            backend:
-              service:
-                name: nginx2-service
-                port:
-                  number: 8080          
+  - host: "devoteam.demo"
+    http:
+      paths:
+        - pathType: Prefix
+          path: /nginx1
+          backend:
+            service:
+              name: nginx1-service
+              port:
+                number: 8080
+        - pathType: Prefix
+          path: /nginx2
+          backend:
+            service:
+              name: nginx2-service
+              port:
+                number: 8080          

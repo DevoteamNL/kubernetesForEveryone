@@ -167,10 +167,6 @@ helm repo add grafana https://grafana.github.io/helm-charts
 helm install grafana grafana/grafana -n random-namespace --version 6.50.7 -f .\grafana\values.yaml
 ```
 
-```
-kubectl port-forward service/grafana 9090:80 -n random-namespace
-```
-
 <p>
 
 ## Author
