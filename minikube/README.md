@@ -97,14 +97,6 @@ kubectl apply -f examples/nginx/nginx2-service.yaml -n random-namespace
 kubectl describe deployment/nginx2-deployment -n random-namespace
 ```
 
-```
-kubectl port-forward service/nginx1-service 8080:8080 -n random-namespace
-```
-
-```
-kubectl port-forward service/nginx2-service 8080:8080 -n random-namespace
-```
-
 #### Let's be curious
 
 ```
@@ -148,6 +140,8 @@ minikube addons enable ingress
 ```
 minikube addons enable ingress-dns
 ```
+
+### Challenge time
 
 ```
 kubectl apply -f examples/ingress/ingress.yaml -n random-namespace
