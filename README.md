@@ -2,13 +2,13 @@
   <br>
 <img src="docs/images/dev_logo_rvb.png"  alt="accessibility text">
   <br>
-  Welcom to our K8s Workshop
+  Welcome to our K8s Workshop
   <br>
 </h1>
 
 The idea of the Workshop is to bring you an overview of K8s. We won't be diving in depth of Kubernetes but we expect you to be able to start you journey after this session.
 
-He you will find different technologies during our hands-on which makes more fun and challenger.
+Here you will find different technologies during our hands-on which makes more fun and challenger.
 
 # Get Started
 
