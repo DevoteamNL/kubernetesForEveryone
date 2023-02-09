@@ -4,4 +4,10 @@
   <br>
 </h1>
 
-# Iac documentation
+## Here you will find the Pulumi example
+
+This is the structure example of the Pulumi project used during the demo.
+
+- [Home](../README.md)
+- [Docs](../docs/README.md)
+- [Minikube](../minikube/README.md)
