@@ -146,6 +146,10 @@ minikube addons enable ingress
 ```
 
 ```
+minikube addons enable ingress-dns
+```
+
+```
 kubectl apply -f examples/ingress/ingress.yaml -n random-namespace
 ```
 
