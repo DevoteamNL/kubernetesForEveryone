@@ -15,4 +15,4 @@ Here you will find different technologies during our hands-on which makes more f
 - [Minikube](./minikube/README.md)
 - [IaC](./iac/README.md)
 - [Documentation](./docs/README.md)
-- [showdown](http://showdownjs.github.io/showdown/)
+- [Our website ](https://www.devoteam.com/)
