@@ -13,6 +13,6 @@ Here you will find different technologies during our hands-on which makes more f
 # Get Started
 
 - [Minikube](./minikube/README.md)
-- [IaC](./iac/README.md)
-- [Documentation](./docs/README.md)
+- [IaC](./iac/)
+- [Documentation](./docs/)
 - [Our website ](https://www.devoteam.com/)
