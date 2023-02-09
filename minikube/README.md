@@ -129,6 +129,16 @@ kubectl describe service nginx1-service -n random-namespace
 minikube dashboard
 ```
 
+### Test with port-forward
+
+```
+kubectl port-forward service/nginx1-service 9090:8080 -n random-namespace
+```
+
+```
+kubectl port-forward service/nginx2-service 9191:8080 -n random-namespace
+```
+
 ### Ingress is your friend
 
 ```
@@ -136,7 +146,7 @@ minikube addons enable ingress
 ```
 
 ```
-kubectl apply -f ingress/ingress.yaml -n random-namespace
+kubectl apply -f examples/ingress/ingress.yaml -n random-namespace
 ```
 
 ```
@@ -150,19 +160,15 @@ choco install kubernetes-helm
 ```
 
 ```
-kubectl create namespace grafana
-```
-
-```
 helm repo add grafana https://grafana.github.io/helm-charts
 ```
 
 ```
-helm install grafana grafana/grafana -n nginx
+helm install grafana grafana/grafana -n random-namespace --version 6.50.7 -f .\grafana\values.yaml
 ```
 
 ```
-kubectl port-forward service/grafana 9090:80 -n grafana
+kubectl port-forward service/grafana 9090:80 -n random-namespace
 ```
 
 <p>
