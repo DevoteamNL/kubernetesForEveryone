@@ -1,3 +1,9 @@
+<h1 align="center">
+  <br>
+<img src="../docs/images/dev_logo_rvb.png" width="300" alt="Devoteam">
+  <br>
+</h1>
+
 # Minikube hands-on
 
 The purporse here is to guide you through the installation steps for minikube, deploy nginx, nginx service, ingress and visualize it.
